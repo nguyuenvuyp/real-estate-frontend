@@ -1,6 +1,6 @@
 # real-estate-frontend
 
-- Đây là phần front end theo như đề bài đã giao, phần này k có gì mới lạ, clone về rôi dùng lệnh 
+- Đây là phần front end theo như đề bài đã giao, yêu cầu cài node phiên bản v22.12.0 và cài npm phiên bản 10.8.2, clone về rôi dùng lệnh 
 ```bash
 npm istall
 ```
