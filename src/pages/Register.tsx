@@ -27,15 +27,10 @@ export default function Register() {
       localStorage.setItem("token", res.data.token);
       nav("/properties", { replace: true });
     } catch (e: unknown) {
-      const err = e as AxiosError<string | { message?: string }>;
-
-      const msg =
-        typeof err.response?.data === "string"
-          ? err.response.data
-          : JSON.stringify(err.response?.data);
-
-      setServerError(msg);
+      const err = e as AxiosError<{ message?: string }>;
+      setServerError(err.response?.data?.message || "Email đã tồn tại!");
     }
+
   };
 
   return (

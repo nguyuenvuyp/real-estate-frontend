@@ -28,7 +28,7 @@ export default function Login() {
             nav("/properties", { replace: true });
         } catch (e: unknown) {
             const err = e as AxiosError<{ message?: string }>;
-            console.log(err.response?.data?.message);
+            setServerError(err.response?.data?.message || "Tài khoản hoặc mật khẩu không đúng");
         }
     };
 
